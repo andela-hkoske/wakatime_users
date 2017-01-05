@@ -1,10 +1,21 @@
-package wakatime
+package wakatime_users
 
 import (
+	"time"
+
 	context "golang.org/x/net/context"
 
 	"google.golang.org/appengine/datastore"
 )
+
+// User
+type User struct {
+	ID        int64     `json:"id" datastore:"-"`
+	APIKey    string    `json:"api_key" form:"api_key"`
+	Email     string    `json:"email" form:"email"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+}
 
 // key returns the a datastore key based of the user id
 func (user *User) key(c context.Context) *datastore.Key {
