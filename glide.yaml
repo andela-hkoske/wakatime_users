@@ -1,0 +1,9 @@
+package: github.com/andela-hkoske/wakatime_users
+import:
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/appengine
+  subpackages:
+  - aetest
+  - datastore
