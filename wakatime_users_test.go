@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
+	"google.golang.org/appengine/aetest"
+
 	context "golang.org/x/net/context"
 
 	"errors"
-
-	"google.golang.org/appengine/aetest"
 )
 
 var (
